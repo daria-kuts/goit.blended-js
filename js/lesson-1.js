@@ -139,7 +139,16 @@ function isAdult(age) {
 console.log(isAdult(15));
 //    if (age >= 18) {
 //        return 'true';
-//    } 
+//    }
 //       return confirm("Вам є 18 років?")
 //}
 //console.log(isAdult(15));
+
+function findNumber(start, end, divisor) {
+    for (let i = 0; i + start <= end; i++) {
+    if( (i + start) % divisor === 0 ) {
+      return i + start;
+      };
+    };
+}
+console.log(findNumber(2, 6, 5));
