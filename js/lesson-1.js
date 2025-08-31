@@ -180,3 +180,16 @@ letNumbers(0,20)
 //     }
 // }
 // console.log(fizzBuzz(15))
+
+function getEvenNumbers(start, end) {
+    let numArr = [];
+    for (i = start; i <= end; i++) {
+        console.log(i);
+        if (i % 2 === 0) {
+            numArr.push(i);
+        };
+    }
+    return numArr;
+}
+
+getEvenNumbers(1, 7)
