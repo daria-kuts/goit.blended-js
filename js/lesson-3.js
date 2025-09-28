@@ -11,26 +11,26 @@
 // з масивів values кожного об'єкту, збережених в одному масиві. 
 // Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
-const data = [
- { id: 1, values: [1, 2, 3] },
- { id: 2, values: [4, 5, 6] },
- { id: 3, values: [7, 8, 9] },
-];
-const newData = data.flatMap((obj) =>obj.values) 
-console.log(newData);
+// const data = [
+//  { id: 1, values: [1, 2, 3] },
+//  { id: 2, values: [4, 5, 6] },
+//  { id: 3, values: [7, 8, 9] },
+// ];
+// const newData = data.flatMap((obj) =>obj.values) 
+// console.log(newData);
 
 // task-3
 // Дано масив об'єктів. 
 // Перевірте, чи є хоча б один об'єкт з віком менше 20 років. 
 // Очікуваний результат: true.
 
-const people = [
- { name: 'John', age: 27 },
- { name: 'Jane', age: 31 },
- { name: 'Bob', age: 19 },
-];
-const age = people.some(obj => obj.age < 20);
-console.log(age);
+// const people = [
+//  { name: 'John', age: 27 },
+//  { name: 'Jane', age: 31 },
+//  { name: 'Bob', age: 19 },
+// ];
+// const age = people.some(obj => obj.age < 20);
+// console.log(age);
 
 
 // task-4
@@ -52,29 +52,29 @@ console.log(age);
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] 
 // у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
 
-const numbersArray = [4, 200, 5, 10, 30];
-const newArray = numbersArray.toSorted((a, b) => a-b)
-console.log(newArray);
+// const numbersArray = [4, 200, 5, 10, 30];
+// const newArray = numbersArray.toSorted((a, b) => a-b)
+// console.log(newArray);
 // task-7
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"]
 //  у порядку алфавіту. 
 // Очікуваний результат: ["apple", "banana", "orange", "pear"].
 
-const stringArray = ['banana', 'orange', 'apple', 'pear'];
-const stringSorted = stringArray.toSorted((a, b) => a.localeCompare(b));
-console.log(stringSorted);
+// const stringArray = ['banana', 'orange', 'apple', 'pear'];
+// const stringSorted = stringArray.toSorted((a, b) => a.localeCompare(b));
+// console.log(stringSorted);
 
 // task-8
 //  Відсортуйте масив об'єктів за віком у порядку зростання. 
 // Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
 
-const users = [
- { name: 'John', age: 27 },
- { name: 'Jane', age: 31 },
- { name: 'Bob', age: 19 },
-];
-const usersSorted = users.toSorted((userA, userB) => userA.age - userB.age);
-console.log(usersSorted);
+// const users = [
+//  { name: 'John', age: 27 },
+//  { name: 'Jane', age: 31 },
+//  { name: 'Bob', age: 19 },
+// ];
+// const usersSorted = users.toSorted((userA, userB) => userA.age - userB.age);
+// console.log(usersSorted);
 
 // task-9
 // Дано масив об'єктів. 
@@ -82,90 +82,90 @@ console.log(usersSorted);
 // вік більше 20 років. 
 // Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
 
-const user = [
- { name: 'John', age: 27 },
- { name: 'Jane', age: 31 },
- { name: 'Bob', age: 19 },
-]
-const userFiltered = user.filter((obj) => obj.age > 20);
-console.log(userFiltered);
+// const user = [
+//  { name: 'John', age: 27 },
+//  { name: 'Jane', age: 31 },
+//  { name: 'Bob', age: 19 },
+// ]
+// const userFiltered = user.filter((obj) => obj.age > 20);
+// console.log(userFiltered);
 
 // task-10
 // Дано масив чисел [1, 2, 3, 4, 5]. 
 // Застосуйте метод для обчислення суми елементів масиву.
 
-const numbers = [1, 2, 3, 4, 5];
-const total = numbers.reduce((previousValue, number) => {
-    return previousValue + number;
-}, 0)
-console.log(total);
+// const numbers = [1, 2, 3, 4, 5];
+// const total = numbers.reduce((previousValue, number) => {
+//     return previousValue + number;
+// }, 0)
+// console.log(total);
 
 // маємо масив об'єктів, який представляє список товарів і їх цін:
 // Завдання: Знайдіть суму вартості всіх товарів, які коштують більше 10 гривень.
-const products = [
-  { name: 'Milk', price: 20 },
-  { name: 'Bread', price: 10 },
-  { name: 'Eggs', price: 15 },
-];
-const newProducts = products.filter((obj) => obj.price > 10).reduce((previousValue, num) => previousValue + num.price, 0);
-console.log(newProducts);
+// const products = [
+//   { name: 'Milk', price: 20 },
+//   { name: 'Bread', price: 10 },
+//   { name: 'Eggs', price: 15 },
+// ];
+// const newProducts = products.filter((obj) => obj.price > 10).reduce((previousValue, num) => previousValue + num.price, 0);
+// console.log(newProducts);
 
 
 // Напишіть функцію getGirlsPassports() яка поверне масив номерів паспортів дівчат.
-const friends = [
-    { passport: '03005988', name: 'Joseph Francis Tribbiani Jr', age: 32, sex: 'm' },
-    { passport: '03005989', name: 'Chandler Muriel Bing', age: 33, sex: 'm' },
-    { passport: '03005990', name: 'Ross Eustace Geller', age: 33, sex: 'm' },
-    { passport: '03005991', name: 'Rachel Karen Green', age: 31, sex: 'f' },
-    { passport: '03005992', name: 'Monica Geller', age: 31, sex: 'f' },
-    { passport: '03005993', name: 'Phoebe Buffay', age: 34, sex: 'f' }
-]
-const onlyGirls = friends.filter((obj) => obj.sex === 'f')
-    .map(friend => friend.passport);
-console.log(onlyGirls);
+// const friends = [
+//     { passport: '03005988', name: 'Joseph Francis Tribbiani Jr', age: 32, sex: 'm' },
+//     { passport: '03005989', name: 'Chandler Muriel Bing', age: 33, sex: 'm' },
+//     { passport: '03005990', name: 'Ross Eustace Geller', age: 33, sex: 'm' },
+//     { passport: '03005991', name: 'Rachel Karen Green', age: 31, sex: 'f' },
+//     { passport: '03005992', name: 'Monica Geller', age: 31, sex: 'f' },
+//     { passport: '03005993', name: 'Phoebe Buffay', age: 34, sex: 'f' }
+// ]
+// const onlyGirls = friends.filter((obj) => obj.sex === 'f')
+//     .map(friend => friend.passport);
+// console.log(onlyGirls);
 
 // //Напиши клас Rectangle який створює об'єкт
 //з ​​властивостями height, width
 //і методом calculateArea() для підрахунку прлощі прямокутника.
-class Rectangle {
-    constructor(width, height) {
-        this.width = width;
-        this.height = height;
-    }
-    calculateArea() {
-        return this.width * this.height;
-    }
-}
+// class Rectangle {
+//     constructor(width, height) {
+//         this.width = width;
+//         this.height = height;
+//     }
+//     calculateArea() {
+//         return this.width * this.height;
+//     }
+// }
 
 // Завдання 12:
  // Напиши клас Client який створює об'єкт з властивостями login email.
  // Оголоси приватні властивості #login #email, доступ до яких зроби 
  // через геттер та сеттер login email
-class Client {
-    #login;
-    #email;
-    constructor(login, email) {
-        this.#login = login;
-        this.#email = email;
-}
-    getLogin() {
-        return this.#login;
-    }
-    setLogin(newLogin) {
-        this.#login = newLogin;
-    }
-    getEmail() {
-        return this.#email;
-    }
-    setEmail(newEmail) {
-        this.#email = newEmail;
-    }
-};
-const client1 = new Client("user", "user@.mail")
-client1.login = "newlogin";
-client1.email = "newEmail@";
-client1.email = "newemail.mail";
-console.log(client1.email);
+// class Client {
+//     #login;
+//     #email;
+//     constructor(login, email) {
+//         this.#login = login;
+//         this.#email = email;
+// }
+//     getLogin() {
+//         return this.#login;
+//     }
+//     setLogin(newLogin) {
+//         this.#login = newLogin;
+//     }
+//     getEmail() {
+//         return this.#email;
+//     }
+//     setEmail(newEmail) {
+//         this.#email = newEmail;
+//     }
+// };
+// const client1 = new Client("user", "user@.mail")
+// client1.login = "newlogin";
+// client1.email = "newEmail@";
+// client1.email = "newemail.mail";
+// console.log(client1.email);
 
  // Розроби клас Calculator, який дозволяє виконувати арифметичні 
  //  операції над числом за допомогою методів класу, підтримуючи  
@@ -249,46 +249,46 @@ console.log(client1.email);
   //  - salary - зарплата співробітника;
   //  - department - відділ, в якому працює співробітник.
   // Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з зарплатою співробітника та відділом, в якому він працює.
-class Person {
-    name;
-    age;
-    gender;
-    email;
-    constructor(name, age, gender, email) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.email = email;
-    }
-    getDetails() {
-        return {
-            name: this.name,
-            age: this.age,
-            gender: this.gender,
-            email: this.email
-        }
-    }
+// class Person {
+//     name;
+//     age;
+//     gender;
+//     email;
+//     constructor(name, age, gender, email) {
+//         this.name = name;
+//         this.age = age;
+//         this.gender = gender;
+//         this.email = email;
+//     }
+//     getDetails() {
+//         return {
+//             name: this.name,
+//             age: this.age,
+//             gender: this.gender,
+//             email: this.email
+//         }
+//     }
    
-}
-class Employee extends Person {
-    constructor(name, age, gender, email, salary, department) {
-        super(name, age, gender, email);
-        this.salary = salary;
-        this.department = department;
-    }
-    getEmployeeDetails() {
-        return {
-            salary: this.salary,
-            department: this.department
-        }
-    }
-    }
+// }
+// class Employee extends Person {
+//     constructor(name, age, gender, email, salary, department) {
+//         super(name, age, gender, email);
+//         this.salary = salary;
+//         this.department = department;
+//     }
+//     getEmployeeDetails() {
+//         return {
+//             salary: this.salary,
+//             department: this.department
+//         }
+//     }
+//     }
 
-const person1 = new Person('Alex', '23', 'm', 'mail@.com');
-console.log(person1.getDetails());
-const employee1 = new Employee('Alex', '23', 'm', 'mail@.com', '2000', 'qa');
+// const person1 = new Person('Alex', '23', 'm', 'mail@.com');
+// console.log(person1.getDetails());
+// const employee1 = new Employee('Alex', '23', 'm', 'mail@.com', '2000', 'qa');
 
-console.log(employee1.getEmployeeDetails());
+// console.log(employee1.getEmployeeDetails());
 // // Створіть клас BankAccount, який має конструктор для зберігання балансу.
 // Додайте методи:
 // withdraw - метод для зняття готівки. Отримує в якості аргументу
